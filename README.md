@@ -1,6 +1,6 @@
 # Trade CyptoCurrency using Cointegration
 ### Trade Strategy
-- [My Blog]
+- [My Blog](https://iwasnothing.medium.com/trade-cryptocurrency-with-cointegration-c697f097424d)
 
 ### Execution
 1. export the following Environment Variables for the Coinbase Pro API credentials, and Trading parameters.
