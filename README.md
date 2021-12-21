@@ -14,7 +14,7 @@ export Intercept=
 export Beta=
 export Lookback=5
 ```
-2.  compile the source by 
+2.  compile the source (cointRealTrade.go) by 
 ```
 go build .
 ```
