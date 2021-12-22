@@ -48,9 +48,17 @@ func getData(s1 string, lookback int, client *coinbasepro.Client) ([]float64, []
 		End:         to,
 		Granularity: 86400,
 	}
-	rates, err := client.GetHistoricRates(s1+"-USDT", rateParm)
-	if err != nil {
-		println(err.Error())
+	var n int
+	var rates []coinbasepro.HistoricRate
+	var err error
+	for ok := true; ok; ok = (err != nil || n == 0) {
+		rates, err = client.GetHistoricRates(s1+"-USDT", rateParm)
+		if err != nil {
+			println(err.Error())
+		} else {
+			n = len(rates)
+			fmt.Println("get rate", n)
+		}
 	}
 	var p1 []float64
 	for _, t := range rates {
